@@ -14,8 +14,6 @@ export default function dashboard() {
 
   return (
     <div className="p-5">
-      
-
       <div className="flex items-end justify-between">
         <div>
           <h2 className='text-3xl text-primary-500 font-bold'>Dashboard</h2>

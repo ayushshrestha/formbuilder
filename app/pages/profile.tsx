@@ -1,11 +1,11 @@
-"use client"
+
 import { useContext, useEffect } from 'react'
 import { Routes , Route, useNavigate } from 'react-router-dom'
-import { AuthContext } from './context/auth-context'
-import Home from './pages/home'
-import Profile from './pages/profile'
+import { AuthContext } from '../context/auth-context'
+import Home from '../pages/home'
+import Profile from '../pages/profile'
 
-function Page() {
+function App() {
   const { currentUser } = useContext(AuthContext)
   const navigate = useNavigate()
 
@@ -27,4 +27,4 @@ function Page() {
   )
 }
 
-export default Page
+export default App
