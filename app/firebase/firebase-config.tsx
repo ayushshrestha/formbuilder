@@ -1,7 +1,6 @@
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import {getAuth, GoogleAuthProvider} from 'firebase/auth'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,16 +16,7 @@ const firebaseConfig = {
   measurementId: "G-TF2F40BMNL"
 };
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-
-  export function getFirebaseConfig() {
-    if (!firebaseConfig || !firebaseConfig.apiKey) {
-      throw new Error('No Firebase configuration object provided.' + '\n' +
-      'Add your web app\'s configuration object to firebase-config.ts');
-    } else {
-      return firebaseConfig;
-    }
-  }    
-  
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const auth =  getAuth(app);
+export const googleProvider = new GoogleAuthProvider();
