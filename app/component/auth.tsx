@@ -30,16 +30,30 @@ export const Auth = () => {
     }
   };
   return (
-    <div>
-      <input placeholder="Email.." onChange={(e) => setEmail(e.target.value)} />
+    <div className="w-96 flex flex-col gap-3">
+      <input 
+        placeholder="Email" 
+        onChange={(e) => setEmail(e.target.value)} 
+        className="p-3 bg-white rounded-md"
+        />
       <input
         type="password"
-        placeholder="Password.."
+        placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
+        className="p-3 bg-white rounded-md"
       />
-      <button onClick={signIn}> Signin</button>
-      <button onClick={signInWithGoogle}> Signin with google</button>
-      <button onClick={logOut}> logOut</button>
+      <button 
+        className="bg-slate-800 p-3 text-white rounded-md" 
+        onClick={signIn}
+        > Signin</button>
+      <button 
+        className="bg-slate-800 p-3 text-white rounded-md" 
+        onClick={signInWithGoogle}
+      > Signin with google</button>
+      <button 
+        className="bg-slate-800 p-3 text-white rounded-md" 
+        onClick={logOut}
+      > logOut</button>
     </div>
   );
 };
