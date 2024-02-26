@@ -43,15 +43,15 @@ export const Auth = () => {
         className="p-3 bg-white rounded-md"
       />
       <button 
-        className="bg-slate-800 p-3 text-white rounded-md" 
+        className="bg-red-900 p-3 text-white rounded-md" 
         onClick={signIn}
         > Signin</button>
       <button 
-        className="bg-slate-800 p-3 text-white rounded-md" 
+        className="bg-red-900 p-3 text-white rounded-md" 
         onClick={signInWithGoogle}
       > Signin with google</button>
       <button 
-        className="bg-slate-800 p-3 text-white rounded-md" 
+        className="bg-red-900 p-3 text-white rounded-md" 
         onClick={logOut}
       > logOut</button>
     </div>
